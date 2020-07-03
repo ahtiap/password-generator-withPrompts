@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      // function to check the user input
+      function promptCheck(numberInput, message) {
+        //loop to make sure the user enters a valid value
+        // boolean variable to run the loop with
+        var isNumber = false;
+        //start of the loop
+        while (!isNumber) {
+          // give the use option to pick a number
+          numberInput = prompt(message);
+          //check if user clicks on cancel
+          if (numberInput == null) {
+            //if he does ask him to enter a  value
+            alert("please enter a value");
+            //check if user enters a correct number
+          } else if (isNaN(parseInt(numberInput))) {
+            //if he doesnt ask him to enter a valid number
+            alert("please enter a valid number");
+            //   if both previous conditions are false then pass the value
+          } else {
+            numberInput = parseInt(numberInput);
+            console.log(numberInput);
+            isNumber = true;
+          }
+        }
+      }
+      
+      
+    </script>
+  </body>
+</html>
